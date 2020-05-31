@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 import { ChartsModule } from 'ng2-charts';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -44,7 +46,7 @@ import { StateDataComponent } from './state-data/state-data.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
