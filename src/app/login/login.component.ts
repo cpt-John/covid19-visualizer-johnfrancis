@@ -57,6 +57,11 @@ export class LoginComponent implements OnInit {
         }
       );
   }
+  guestLogin() {
+    localStorage.setItem('covid_app_token', 'guestToken');
+    this._router.navigate(['/home']);
+    this.toastr.success('Logged In!');
+  }
   mapVals(obj) {
     return {
       email: obj['email'],
