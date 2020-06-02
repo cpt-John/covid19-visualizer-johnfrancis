@@ -57,19 +57,17 @@
       <button
         *ngIf="!requesting"
         type="submit"
-        class="btn btn-primary"
+        class="btn btn-primary mr-4"
         [ngClass]="{
           'btn-success': profileForm.valid,
           'btn-danger': profileForm.invalid
         }"
         [disabled]="profileForm.invalid"
       >
-        Login</button
-      >/<button
-        class="btn btn-warning ml-4"
-        type="button"
-        (click)="guestLogin()"
-      >
+        Login
+      </button>
+      /
+      <button class="btn btn-warning ml-4" type="button" (click)="guestLogin()">
         Guest Login
       </button>
     </form>
